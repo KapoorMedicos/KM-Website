@@ -105,3 +105,14 @@ Kapoor Medicos is currently an **informational website**. This upgrade will intr
 ```sh
 git clone https://github.com/your-username/kapoor-medicos.git
 cd kapoor-medicos
+
+# Install Dependencies  
+npm install
+
+# Create a .env file and add  
+BACKEND_API_KEY=your_firebase_api_key
+DATABASE_URL=your_database_url
+RAZORPAY_KEY=your_razorpay_api_key
+
+# Run The Development Server  
+npm start
