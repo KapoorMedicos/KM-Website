@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapoor Medicos - Your Trusted Pharmacy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>  
+    <script>
+        function loadProductDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productName = urlParams.get('product') || "Unknown Product";
+            document.getElementById("product-name").innerText = productName.replace(/([A-Z])/g, ' $1').trim();
+        }
+    </script>
+</head>
+<body onload="loadProductDetails()">
+    <body>
+        <header class="header">
+            <div class="container">
+                <h1 class="logo" id="logo">KM</h1>
+                <div class="menu-container">
+                    <button class="menu-toggle">☰</button>
+                    <nav class="nav">
+                        <a href="index.html">Home</a>
+                        <a href="products.html">Products</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>            
+                    <a href="tel:+919815483985" class="call-button">Contact</a>
+            </div>    
+        </header>
+
+    <main>
+        <section class="product-details">
+            <h2 id="product-name">Product Name</h2>
+            <p>More details about this product will be added soon.</p>
+            <a href="products.html" class="btn">Back to Products</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kapoor Medicos. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const profilePic = document.getElementById("profile-pic");
+            const profileMenu = document.getElementById("profile-menu");
+    
+            profilePic.addEventListener("click", function() {
+                if (profileMenu.classList.contains("show")) {
+                    profileMenu.style.opacity = "0";
+                    profileMenu.style.transform = "translateY(-20px) scale(0.95)";
+                    setTimeout(() => profileMenu.classList.remove("show"), 300);
+                } else {
+                    profileMenu.classList.add("show");
+                    setTimeout(() => {
+                        profileMenu.style.opacity = "1";
+                        profileMenu.style.transform = "translateY(0) scale(1)";
+                    }, 10);
+                }
+            });
+    
+            document.addEventListener("click", function(event) {
+                if (!profilePic.contains(event.target) && !profileMenu.contains(event.target)) {
+                    profileMenu.style.opacity = "0";
+                    profileMenu.style.transform = "translateY(-20px) scale(0.95)";
+                    setTimeout(() => profileMenu.classList.remove("show"), 300);
+                }
+            });
+        });
+    </script>
+    <script>
+        function scrollBrands(amount) {
+            document.getElementById("brandsContainer").scrollBy({ left: amount, behavior: 'smooth' });
+        }
+    </script> 
+</body>
+</html>
