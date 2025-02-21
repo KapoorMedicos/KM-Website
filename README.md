@@ -21,7 +21,12 @@ Kapoor Medicos is currently an **informational website**. This upgrade will intr
 ### **1️⃣ Setup & Environment**  
 ✅ Backup existing website files  
 ✅ Set up a **GitHub repository**  
-✅ Choose a **backend**: Node.js (Express.js) / Firebase / Django  
+✅ Choose a **backend**: Node.js (Express.js) / Firebase / Django 
+
+   **Start with Firebase (for speed & ease) → No coding, quick launch.  
+   Migrate to Django + PostgreSQL when you scale → Cost-effective for growth.  
+   This way, you start quickly with Firebase, then move to Django when business grows.** 
+
 ✅ Select a **database**: Firebase Firestore / MySQL / MongoDB  
 
 ---
