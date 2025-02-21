@@ -313,6 +313,7 @@ nav ul li a:hover {
     font-size: 18px;
     margin-top: 10px;
     opacity: 0.9;
+    padding-bottom: 2%;
 }
 
 /* Fix Button Position */
