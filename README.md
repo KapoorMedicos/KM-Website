@@ -25,9 +25,13 @@ Kapoor Medicos is currently an **informational website**. This upgrade will intr
 
    **Start with Firebase (for speed & ease) → No coding, quick launch.  
    Migrate to Django + PostgreSQL when you scale → Cost-effective for growth.  
-   This way, you start quickly with Firebase, then move to Django when business grows.** 
+    This way, you start quickly with Firebase, then move to Django when business grows.** 
 
 ✅ Select a **database**: Firebase Firestore / MySQL / MongoDB  
+
+   **Start with Firebase Firestore (Easy, No Backend Needed).  
+   Migrate to MySQL later (Cost-effective for scaling).  
+   This way, you launch quickly with Firebase, then switch to MySQL when business grows.**   
 
 ---
 
