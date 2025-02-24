@@ -32,7 +32,7 @@ Kapoor Medicos is currently an **informational website**. This upgrade will intr
 ---
 
 ### **2️⃣ Product Management System**  
-🛒 Create a **products database** table/collection  
+✅ Create a **products database** table/collection  
 🛒 Design an **admin panel** to add, edit, and delete products  
 🛒 Store product images using **Cloudinary / Firebase Storage / Local storage**  
 
