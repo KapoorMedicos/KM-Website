@@ -33,7 +33,4 @@ config/settings_local.py
 *.key
 
 # Ignore node modules if using a frontend
-node_modules/
-
-README(APP).md
-README(POS).md
+node_modules
