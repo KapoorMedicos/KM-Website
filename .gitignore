@@ -1,0 +1,36 @@
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+*.env
+
+# Django-related files
+*.sqlite3
+/db.sqlite3
+/media/
+/static/
+
+# Logs and cache
+logs/
+*.log
+*.pot
+*.py[co]
+
+# Ignore IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Ignore secrets and configurations
+config/settings_local.py
+*.pem
+*.crt
+*.key
+
+# Ignore node modules if using a frontend
+node_modules/
