@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapoor Medicos - Your Trusted Pharmacy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>  
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo" id="logo">KM</h1>
+            <div class="menu-container">
+                <button class="menu-toggle">☰</button>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>            
+                <a href="tel:+919815483985" class="call-button">Contact</a>
+        </div>    
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>About Kapoor Medicos</h2>
+                <p>Providing quality medicines and healthcare products with trust and care since 1990.</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <h2>Our Story</h2>
+                <p>Kapoor Medicos was established in 1990 with a mission to provide top-quality pharmaceutical products and healthcare solutions. Over the years, we have built a reputation as a trusted pharmacy, ensuring that our customers receive the best care and guidance.</p>
+
+                <h2>Our Mission</h2>
+                <p>We strive to make healthcare accessible and convenient for everyone. Our goal is to provide expert guidance, a wide range of medicines, and exceptional customer service to support the well-being of our community.</p>
+
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li>Trusted pharmacy with 30+ years of experience</li>
+                    <li>Wide range of high-quality prescription and OTC medicines</li>
+                    <li>Expert consultation from professional pharmacists</li>
+                    <li>Convenient and reliable service</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kapoor Medicos. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const profilePic = document.getElementById("profile-pic");
+            const profileMenu = document.getElementById("profile-menu");
+    
+            profilePic.addEventListener("click", function() {
+                if (profileMenu.classList.contains("show")) {
+                    profileMenu.style.opacity = "0";
+                    profileMenu.style.transform = "translateY(-20px) scale(0.95)";
+                    setTimeout(() => profileMenu.classList.remove("show"), 300);
+                } else {
+                    profileMenu.classList.add("show");
+                    setTimeout(() => {
+                        profileMenu.style.opacity = "1";
+                        profileMenu.style.transform = "translateY(0) scale(1)";
+                    }, 10);
+                }
+            });
+    
+            document.addEventListener("click", function(event) {
+                if (!profilePic.contains(event.target) && !profileMenu.contains(event.target)) {
+                    profileMenu.style.opacity = "0";
+                    profileMenu.style.transform = "translateY(-20px) scale(0.95)";
+                    setTimeout(() => profileMenu.classList.remove("show"), 300);
+                }
+            });
+        });
+    </script>
+    <script>
+        function scrollBrands(amount) {
+            document.getElementById("brandsContainer").scrollBy({ left: amount, behavior: 'smooth' });
+        }
+    </script> 
+</body>
+</html>

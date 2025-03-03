@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapoor Medicos - Your Trusted Pharmacy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>  
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo" id="logo">KM</h1>
+            <div class="menu-container">
+                <button class="menu-toggle">☰</button>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>            
+                <a href="tel:+919815483985" class="call-button">Contact</a>
+        </div>    
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions? Need assistance? We are here to help!</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p><strong>Address:</strong> Kapoor Medicos, Sector 40C, Chandigarh, India</p>
+                <p><strong>Phone:</strong> <a href="tel:+919815483985">+91 98154-83985</a></p>
+                <p><strong>Email:</strong> <a href="mailto:kapoormedicos77766@gmail.com">KapoorMedicos77766@gmail.com</a></p>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <div class="container">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kapoor Medicos. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+    <script> /*for scrolling funtion of brands we sell*/
+        document.addEventListener("DOMContentLoaded", function() {
+            const profilePic = document.getElementById("profile-pic");
+            const profileMenu = document.getElementById("profile-menu");
+    
+            profilePic.addEventListener("click", function() {
+                if (profileMenu.classList.contains("show")) {
+                    profileMenu.style.opacity = "0";
+                    profileMenu.style.transform = "translateY(-20px) scale(0.95)";
+                    setTimeout(() => profileMenu.classList.remove("show"), 300);
+                } else {
+                    profileMenu.classList.add("show");
+                    setTimeout(() => {
+                        profileMenu.style.opacity = "1";
+                        profileMenu.style.transform = "translateY(0) scale(1)";
+                    }, 10);
+                }
+            });
+    
+            document.addEventListener("click", function(event) {
+                if (!profilePic.contains(event.target) && !profileMenu.contains(event.target)) {
+                    profileMenu.style.opacity = "0";
+                    profileMenu.style.transform = "translateY(-20px) scale(0.95)";
+                    setTimeout(() => profileMenu.classList.remove("show"), 300);
+                }
+            });
+        });
+    </script>
+    <script>
+        function scrollBrands(amount) {
+            document.getElementById("brandsContainer").scrollBy({ left: amount, behavior: 'smooth' });
+        }
+    </script> 
+</body>
+</html>
